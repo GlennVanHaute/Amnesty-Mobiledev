@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Doneer"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:paddingTop="30dp"
+        android:paddingLeft="15dp" />
+    <TextView
+        android:text="Voer het gewenste bedrag in"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp" />
+    <CheckedTextView
+        android:layout_width="36.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkedTextView2" />
+    <EditText
+        android:inputType="numberDecimal"
+        android:layout_width="346.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp" />
+    <TextView
+        android:text="Type"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="379.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
+    <ToggleButton
+        android:layout_width="130.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButton1"
+        android:textOn="Enkel"
+        android:textOff="Domiciliëring" />
+    <Button
+        android:text="Verder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+</LinearLayout>
