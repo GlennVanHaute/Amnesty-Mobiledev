@@ -17,12 +17,17 @@ namespace AmnestyInternational
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.donate);
-			button.Click += delegate {
+			Button buttonDonate = FindViewById<Button> (Resource.Id.donate);
+			buttonDonate.Click += delegate {
 				
 				SetContentView (Resource.Layout.Contactgegevens);
 			};
-
+				
+//			Button buttonGoToBedrag = FindViewById<Button> (Resource.Id.goToBedrag);
+//			buttonGoToBedrag.Click += delegate {
+//
+//				SetContentView (Resource.Layout.Bedrag);
+//			};
 		}
 	}
 }
