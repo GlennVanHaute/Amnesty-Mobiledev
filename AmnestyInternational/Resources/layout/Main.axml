@@ -2,19 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageView
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TextView
+        android:text="Amnesty International streeft de naleving van alle mensenrechten na. De Universele Verklaring van de Rechten van de Mens is daarbij onze leidraad. In onze campagnes en acties, voorafgegaan door grondig onderzoek, staan steeds een thema of land centraal. "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView1" />
-    <Button
-        android:id="@+id/myButton"
+        android:id="@+id/textView1"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp" />
+    <TextView
+        android:text="Jouw gift helpt Amnesty International om de vrije meningsuiting te verdedigen, geweld tegen vrouwen te stoppen, te vechten tegen de doodstraf, gewetensgevangenen te bevrijden en meer."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:id="@+id/textView2"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp" />
     <Button
         android:text="Doneer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/donate" />
 </LinearLayout>
