@@ -25,7 +25,7 @@ namespace AmnestyInternational
 
 			Button backToMain = FindViewById<Button> (Resource.Id.backToMain);
 			TextView naamId = FindViewById<TextView> (Resource.Id.naamId);
-
+			// naamID aanpassen met de data dat we binnenkrijgen via de vorige intent -> naamID.Text (code voor de text van selected id aan te passen)
 			backToMain.Click += (sender, e) => {
 				{
 					var intent = new Intent(this, typeof(MainActivity));

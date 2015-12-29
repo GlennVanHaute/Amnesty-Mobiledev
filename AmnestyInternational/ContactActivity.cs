@@ -28,10 +28,9 @@ namespace AmnestyInternational
 			goToBedrag.Click += (sender, e) => {
 				{
 					var intent = new Intent(this, typeof(BedragActivity));
-					//hier kunnen we data doorspelen naar de volgende Activity door deze aan de intent de linken
-					// string naamVar = string.Empty;
-					// naamVar = VoornaamNaam.Text;
-					// intent.SetData("naampersoon", naamVar);
+					//data ophalen wat user invulde in field die dan doorsturen naar de setData
+
+					// intent.SetData("Naam_Data", data);
 					StartActivity(intent);
 				}
 			};	
