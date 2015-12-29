@@ -48,7 +48,7 @@ namespace AmnestyInternational
 			public const int autoCompleteTextView1 = 2131034128;
 			
 			// aapt resource value: 0x7f050006
-			public const int button1 = 2131034118;
+			public const int backToMain = 2131034118;
 			
 			// aapt resource value: 0x7f050012
 			public const int button2 = 2131034130;

@@ -1,7 +1,13 @@
-﻿using Android.App;
-using Android.Widget;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Android.App;
+using Android.Content;
 using Android.OS;
-
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
 namespace AmnestyInternational
 {
 	[Activity (Label = "AmnestyInternational", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -18,18 +24,13 @@ namespace AmnestyInternational
 			// Get our button from the layout resource,
 			// and attach an event to it
 			Button buttonDonate = FindViewById<Button> (Resource.Id.donate);
-			buttonDonate.Click += delegate {
-				
-				SetContentView (Resource.Layout.Contactgegevens);
+			buttonDonate.Click += (sender, e) => {
+				{
+					var intent = new Intent(this, typeof(ContactActivity));
+					StartActivity(intent);
+				}
+			};	
 
-
-				Button buttonGoToBedrag = FindViewById<Button> (Resource.Id.goToBedrag);
-				buttonGoToBedrag.Click += delegate {
-
-					SetContentView (Resource.Layout.Bedrag);
-				};
-			};
-				
 
 		}
 	}
