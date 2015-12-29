@@ -22,7 +22,7 @@ Styling
 
 
 
--  check if user info is correct (add button to the Contactgegevens which list all the input fields, just like in the Xamarin demo ( call history))
+-  check if user info is correct (add button to the Contactgegevens which list all the input fields, just like in the Xamarin demo ( call history From Xamarin Tutorial)
 -  Pass data to other activities
 -  eventhandlers (form check)
 
@@ -33,3 +33,6 @@ Styling
 http://stackoverflow.com/questions/19151692/difference-between-putextra-and-setdata
 
 https://developer.xamarin.com/recipes/android/fundamentals/activity/pass_data_between_activity/
+
+https://developer.xamarin.com/recipes/android/controls/edittext/capture_user_input_text/
+
