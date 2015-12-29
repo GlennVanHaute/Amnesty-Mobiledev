@@ -15,7 +15,8 @@ namespace AmnestyInternational
 {
 	[Activity (Label = "ContactActivity")]			
 	public class ContactActivity : Activity
-	{
+	{		
+		
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -23,10 +24,14 @@ namespace AmnestyInternational
 			// Create your application here
 			SetContentView (Resource.Layout.Contactgegevens);
 			Button goToBedrag = FindViewById<Button> (Resource.Id.goToBedrag);
+			TextView VoornaamNaam = FindViewById<TextView> (Resource.Id.VoornaamNaam);
 			goToBedrag.Click += (sender, e) => {
 				{
 					var intent = new Intent(this, typeof(BedragActivity));
-					//hier kunnen we data doorspelen naar de volgende Activity door deze aan de intent de linken.
+					//hier kunnen we data doorspelen naar de volgende Activity door deze aan de intent de linken
+					// string naamVar = string.Empty;
+					// naamVar = VoornaamNaam.Text;
+					// intent.SetData("naampersoon", naamVar);
 					StartActivity(intent);
 				}
 			};	

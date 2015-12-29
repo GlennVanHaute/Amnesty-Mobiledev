@@ -22,7 +22,10 @@ namespace AmnestyInternational
 
 			// Create your application here
 			SetContentView (Resource.Layout.Bedrag);
+
 			Button backToMain = FindViewById<Button> (Resource.Id.backToMain);
+			TextView naamId = FindViewById<TextView> (Resource.Id.naamId);
+
 			backToMain.Click += (sender, e) => {
 				{
 					var intent = new Intent(this, typeof(MainActivity));

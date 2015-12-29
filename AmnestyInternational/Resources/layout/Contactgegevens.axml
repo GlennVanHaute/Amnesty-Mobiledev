@@ -22,7 +22,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3"
+                android:id="@+id/VoornaamNaam"
                 android:paddingTop="20dp" />
             <EditText
                 android:inputType="textPersonName"

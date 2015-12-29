@@ -12,6 +12,13 @@
         android:paddingTop="30dp"
         android:paddingLeft="15dp" />
     <TextView
+        android:text="Naam"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/naamId"
+        android:paddingLeft="15dp" />
+    <TextView
         android:text="Voer het gewenste bedrag in"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
