@@ -4,6 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="300px"
+        android:id="@+id/demoImageView"
+        android:src="@drawable/sample1"
+        android:scaleType="fitCenter"
+        android:paddingTop="20dp" />
     <TextView
         android:text="Amnesty International streeft de naleving van alle mensenrechten na. De Universele Verklaring van de Rechten van de Mens is daarbij onze leidraad. In onze campagnes en acties, voorafgegaan door grondig onderzoek, staan steeds een thema of land centraal. "
         android:layout_width="match_parent"
