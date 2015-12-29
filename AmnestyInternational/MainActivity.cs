@@ -21,13 +21,16 @@ namespace AmnestyInternational
 			buttonDonate.Click += delegate {
 				
 				SetContentView (Resource.Layout.Contactgegevens);
+
+
+				Button buttonGoToBedrag = FindViewById<Button> (Resource.Id.goToBedrag);
+				buttonGoToBedrag.Click += delegate {
+
+					SetContentView (Resource.Layout.Bedrag);
+				};
 			};
 				
-//			Button buttonGoToBedrag = FindViewById<Button> (Resource.Id.goToBedrag);
-//			buttonGoToBedrag.Click += delegate {
-//
-//				SetContentView (Resource.Layout.Bedrag);
-//			};
+
 		}
 	}
 }
