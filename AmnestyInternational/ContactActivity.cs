@@ -29,11 +29,26 @@ namespace AmnestyInternational
 				{
 					var intent = new Intent(this, typeof(BedragActivity));
 					//data ophalen wat user invulde in field die dan doorsturen naar de setData
+				
+					var nameField = FindViewById<EditText> (Resource.Id.name);
 
-					// intent.SetData("Naam_Data", data);
+					intent.PutExtra("Naam_Data", nameField.Text.ToString ());
 					StartActivity(intent);
 				}
-			};	
+			};
+
+//			var nameField = FindViewById<EditText> (Resource.Id.name);
+//			var test = nameField.Text.ToString();
+//
+//			var textView = FindViewById<TextView> (Resource.Id.VoornaamNaam);
+//
+//			nameField.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+//
+//				textView.Text = e.Text.ToString ();
+//
+//			};
+
+
 		}
 	}
 }

@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Util;
 
 namespace AmnestyInternational
 {
@@ -19,6 +20,12 @@ namespace AmnestyInternational
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
+
+			string text = Intent.GetStringExtra("Naam_Data") ?? "Data not available";
+			Log.Info("test", text); // dit werkt!
+
+			var textView = FindViewById<TextView> (Resource.Id.textView);
+			//textView.Text = "trololo";
 
 			// Create your application here
 			SetContentView (Resource.Layout.Bedrag);
