@@ -30,9 +30,23 @@ namespace AmnestyInternational
 					var intent = new Intent(this, typeof(BedragActivity));
 					//data ophalen wat user invulde in field die dan doorsturen naar de setData
 				
-					var nameField = FindViewById<EditText> (Resource.Id.name);
+					var inputName = FindViewById<EditText> (Resource.Id.inputName);
+					var inputEmail = FindViewById<EditText> (Resource.Id.inputEmail);
+					var inputStreet = FindViewById<EditText> (Resource.Id.inputStreet);
+					var inputZipcode = FindViewById<EditText> (Resource.Id.inputZipcode);
+					var inputCity = FindViewById<EditText> (Resource.Id.inputCity);
+					var inputCountry = FindViewById<EditText> (Resource.Id.inputCountry);
 
-					intent.PutExtra("Naam_Data", nameField.Text.ToString ());
+					Donator donator = new Donator();
+					donator.name = inputName.Text.ToString();
+					donator.email = inputEmail.Text.ToString();
+					donator.street = inputStreet.Text.ToString();
+					donator.zipcode = inputZipcode.Text.ToString();
+					donator.city = inputCity.Text.ToString();
+					donator.country = inputCountry.Text.ToString();
+
+
+					intent.PutExtra("donator", donator);
 					StartActivity(intent);
 				}
 			};

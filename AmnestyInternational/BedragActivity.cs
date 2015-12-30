@@ -21,8 +21,9 @@ namespace AmnestyInternational
 		{
 			base.OnCreate (savedInstanceState);
 
-			string text = Intent.GetStringExtra("Naam_Data") ?? "Data not available";
-			Log.Info("test", text); // dit werkt!
+			string json = Intent.GetStringExtra("donator");
+			Donator donator = JsonConvert.DeserializeObject<Donator> (json);
+			Log.Info("test", donator.name); // dit werkt!
 
 			var textView = FindViewById<TextView> (Resource.Id.textView);
 			//textView.Text = "trololo";
