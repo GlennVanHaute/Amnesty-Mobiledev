@@ -30,6 +30,11 @@ namespace AmnestyInternational
 			ArrayAdapter autoCompleteAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleDropDownItem1Line, autoCompleteOptions);
 			var autocompleteTextView = FindViewById<AutoCompleteTextView>(Resource.Id.inputCountry);
 			autocompleteTextView.Adapter = autoCompleteAdapter;
+
+
+
+
+
 			goToBedrag.Click += (sender, e) => {
 				{
 					var intent = new Intent(this, typeof(BedragActivity));
@@ -58,7 +63,13 @@ namespace AmnestyInternational
 					intent.PutExtra("donator_zipcode", inputZipcode.Text.ToString());
 					intent.PutExtra("donator_city", inputCity.Text.ToString());
 					intent.PutExtra("donator_country", inputCountry.Text.ToString());
-					StartActivity(intent);
+					if (String.IsNullOrWhiteSpace(inputName.Text.ToString())){
+						inputName.Error = "Dit veld is leeg";
+					}
+					else{
+						StartActivity(intent);
+
+					}
 				}
 			};
 

@@ -91,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/goToBedrag"
                 android:textStyle="bold"
-                android:textColor="#ff00c853" />
+                android:textColor="#ff00c853"
+                android:enabled="true" />
             <Button
                 android:text="Terug"
                 android:layout_width="match_parent"
