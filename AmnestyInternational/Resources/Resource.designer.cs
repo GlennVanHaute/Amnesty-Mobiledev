@@ -66,9 +66,6 @@ namespace AmnestyInternational
 			// aapt resource value: 0x7f060002
 			public const int amountLbl = 2131099650;
 			
-			// aapt resource value: 0x7f060015
-			public const int autoCompleteTextView1 = 2131099669;
-			
 			// aapt resource value: 0x7f060007
 			public const int backToMain = 2131099655;
 			
@@ -90,29 +87,32 @@ namespace AmnestyInternational
 			// aapt resource value: 0x7f060004
 			public const int editText1 = 2131099652;
 			
-			// aapt resource value: 0x7f06000d
-			public const int editText2 = 2131099661;
-			
-			// aapt resource value: 0x7f06000f
-			public const int editText3 = 2131099663;
-			
-			// aapt resource value: 0x7f060011
-			public const int editText4 = 2131099665;
-			
-			// aapt resource value: 0x7f060013
-			public const int editText5 = 2131099667;
-			
 			// aapt resource value: 0x7f060016
 			public const int goToBedrag = 2131099670;
+			
+			// aapt resource value: 0x7f060013
+			public const int inputCity = 2131099667;
+			
+			// aapt resource value: 0x7f060015
+			public const int inputCountry = 2131099669;
+			
+			// aapt resource value: 0x7f06000d
+			public const int inputEmail = 2131099661;
+			
+			// aapt resource value: 0x7f06000b
+			public const int inputName = 2131099659;
+			
+			// aapt resource value: 0x7f06000f
+			public const int inputStreet = 2131099663;
+			
+			// aapt resource value: 0x7f060011
+			public const int inputZipcode = 2131099665;
 			
 			// aapt resource value: 0x7f060018
 			public const int linearLayout1 = 2131099672;
 			
 			// aapt resource value: 0x7f060001
 			public const int naamId = 2131099649;
-			
-			// aapt resource value: 0x7f06000b
-			public const int name = 2131099659;
 			
 			// aapt resource value: 0x7f060008
 			public const int textView = 2131099656;

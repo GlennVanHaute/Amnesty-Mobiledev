@@ -28,7 +28,7 @@
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/name" />
+                android:id="@+id/inputName" />
             <TextView
                 android:text="Email"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -40,7 +40,7 @@
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText2" />
+                android:id="@+id/inputEmail" />
             <TextView
                 android:text="Straat en nummer + bus"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -51,7 +51,7 @@
                 android:inputType="textPostalAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText3" />
+                android:id="@+id/inputStreet" />
             <TextView
                 android:text="Postcode"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -63,7 +63,7 @@
                 android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText4" />
+                android:id="@+id/inputZipcode" />
             <TextView
                 android:text="Gemeente"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -74,7 +74,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText5" />
+                android:id="@+id/inputCity" />
             <TextView
                 android:text="Land"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -84,7 +84,7 @@
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/autoCompleteTextView1" />
+                android:id="@+id/inputCountry" />
             <Button
                 android:text="Verder"
                 android:layout_width="match_parent"
