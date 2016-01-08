@@ -21,11 +21,15 @@ namespace AmnestyInternational
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-
+			var autoCompleteOptions = new String[] { "België", "Nederland", "Luxemburg", "Frankrijk", "Groot-Brittannië" };
+		
 			// Create your application here
 			SetContentView (Resource.Layout.Contactgegevens);
 			Button goToBedrag = FindViewById<Button> (Resource.Id.goToBedrag);
 			TextView VoornaamNaam = FindViewById<TextView> (Resource.Id.VoornaamNaam);
+			ArrayAdapter autoCompleteAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleDropDownItem1Line, autoCompleteOptions);
+			var autocompleteTextView = FindViewById<AutoCompleteTextView>(Resource.Id.inputCountry);
+			autocompleteTextView.Adapter = autoCompleteAdapter;
 			goToBedrag.Click += (sender, e) => {
 				{
 					var intent = new Intent(this, typeof(BedragActivity));

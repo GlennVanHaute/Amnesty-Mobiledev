@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Bank gegevens"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/donateLbl"
+        android:paddingTop="30dp"
+        android:paddingLeft="15dp" />
+    <TextView
+        android:text="IBAN"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountLbl"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp" />
+    <CheckedTextView
+        android:layout_width="36.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkedTextView2" />
+    <EditText
+        android:inputType="numberDecimal"
+        android:layout_width="373.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Iban"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp" />
+    <TextView
+        android:text="Verval Datum"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountLbl"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp" />
+    <EditText
+        android:inputType="date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2" />
+    <CheckedTextView
+        android:layout_width="36.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkedTextView2" />
+    <Button
+        android:text="Verder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backToMain" />
+</LinearLayout>
