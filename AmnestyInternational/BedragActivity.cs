@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Util;
+//using Newtonsoft.Json;
 
 namespace AmnestyInternational
 {
@@ -21,11 +22,20 @@ namespace AmnestyInternational
 		{
 			base.OnCreate (savedInstanceState);
 
-			string json = Intent.GetStringExtra("donator");
-			Donator donator = JsonConvert.DeserializeObject<Donator> (json);
-			Log.Info("test", donator.name); // dit werkt!
+			//string json = Intent.GetStringExtra("donator");
+			//Donator donator = JsonConvert.DeserializeObject<Donator> (json);
+			// Log.Info("test", donator.name); 
 
-			var textView = FindViewById<TextView> (Resource.Id.textView);
+			string donator_name = Intent.GetStringExtra("donator_name") ?? "Data not available";
+			string donator_email = Intent.GetStringExtra("donator_email") ?? "Data not available";
+			string donator_street = Intent.GetStringExtra("donator_street") ?? "Data not available";
+			string donator_zipcode = Intent.GetStringExtra("donator_zipcode") ?? "Data not available";
+			string donator_city = Intent.GetStringExtra("donator_city") ?? "Data not available";
+			string donator_country = Intent.GetStringExtra("donator_country") ?? "Data not available";
+			Log.Info ("donator_name", donator_name); // dit werkt!
+
+
+			//var textView = FindViewById<TextView> (Resource.Id.textView);
 			//textView.Text = "trololo";
 
 			// Create your application here

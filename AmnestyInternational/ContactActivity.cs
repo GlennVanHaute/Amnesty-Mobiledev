@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+//using Newtonsoft.Json;
 
 namespace AmnestyInternational
 {
@@ -37,16 +38,22 @@ namespace AmnestyInternational
 					var inputCity = FindViewById<EditText> (Resource.Id.inputCity);
 					var inputCountry = FindViewById<EditText> (Resource.Id.inputCountry);
 
-					Donator donator = new Donator();
-					donator.name = inputName.Text.ToString();
-					donator.email = inputEmail.Text.ToString();
-					donator.street = inputStreet.Text.ToString();
-					donator.zipcode = inputZipcode.Text.ToString();
-					donator.city = inputCity.Text.ToString();
-					donator.country = inputCountry.Text.ToString();
+					//Donator donator = new Donator();
+					//donator.name = inputName.Text.ToString();
+					//donator.email = inputEmail.Text.ToString();
+					//donator.street = inputStreet.Text.ToString();
+					//donator.zipcode = inputZipcode.Text.ToString();
+					//donator.city = inputCity.Text.ToString();
+					//donator.country = inputCountry.Text.ToString();
+					//intent.PutExtra("donator_name", JsonConvert.SerializeObject(donator));
 
 
-					intent.PutExtra("donator", donator);
+					intent.PutExtra("donator_name", inputName.Text.ToString());
+					intent.PutExtra("donator_email", inputEmail.Text.ToString());
+					intent.PutExtra("donator_street", inputStreet.Text.ToString());
+					intent.PutExtra("donator_zipcode", inputZipcode.Text.ToString());
+					intent.PutExtra("donator_city", inputCity.Text.ToString());
+					intent.PutExtra("donator_country", inputCountry.Text.ToString());
 					StartActivity(intent);
 				}
 			};
