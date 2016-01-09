@@ -60,6 +60,9 @@ namespace AmnestyInternational
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060017
+			public const int ErrorButton = 2131099671;
+			
 			// aapt resource value: 0x7f06000a
 			public const int VoornaamNaam = 2131099658;
 			
@@ -69,17 +72,17 @@ namespace AmnestyInternational
 			// aapt resource value: 0x7f060007
 			public const int backToMain = 2131099655;
 			
-			// aapt resource value: 0x7f060017
-			public const int button2 = 2131099671;
+			// aapt resource value: 0x7f060018
+			public const int button2 = 2131099672;
 			
 			// aapt resource value: 0x7f060003
 			public const int checkedTextView2 = 2131099651;
 			
-			// aapt resource value: 0x7f060019
-			public const int demoImageView = 2131099673;
+			// aapt resource value: 0x7f06001a
+			public const int demoImageView = 2131099674;
 			
-			// aapt resource value: 0x7f06001b
-			public const int donate = 2131099675;
+			// aapt resource value: 0x7f06001c
+			public const int donate = 2131099676;
 			
 			// aapt resource value: 0x7f060000
 			public const int donateLbl = 2131099648;
@@ -108,8 +111,8 @@ namespace AmnestyInternational
 			// aapt resource value: 0x7f060011
 			public const int inputZipcode = 2131099665;
 			
-			// aapt resource value: 0x7f060018
-			public const int linearLayout1 = 2131099672;
+			// aapt resource value: 0x7f060019
+			public const int linearLayout1 = 2131099673;
 			
 			// aapt resource value: 0x7f060001
 			public const int naamId = 2131099649;
@@ -120,8 +123,8 @@ namespace AmnestyInternational
 			// aapt resource value: 0x7f060009
 			public const int textView1 = 2131099657;
 			
-			// aapt resource value: 0x7f06001a
-			public const int textView2 = 2131099674;
+			// aapt resource value: 0x7f06001b
+			public const int textView2 = 2131099675;
 			
 			// aapt resource value: 0x7f060005
 			public const int textView3 = 2131099653;

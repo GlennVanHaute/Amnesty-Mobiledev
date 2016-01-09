@@ -93,6 +93,12 @@
                 android:textStyle="bold"
                 android:textColor="#ff00c853"
                 android:enabled="true" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ErrorButton"
+                android:visibility="visible" />
             <Button
                 android:text="Terug"
                 android:layout_width="match_parent"
