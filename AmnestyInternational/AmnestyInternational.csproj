@@ -53,6 +53,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Donator.cs" />
+    <Compile Include="ComfirmationActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -71,6 +72,7 @@
     <AndroidResource Include="Resources\layout\Bedrag.axml" />
     <AndroidResource Include="Resources\layout\Contactgegevens.axml" />
     <AndroidResource Include="Resources\drawable\sample1.png" />
+    <AndroidResource Include="Resources\layout\Donator.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

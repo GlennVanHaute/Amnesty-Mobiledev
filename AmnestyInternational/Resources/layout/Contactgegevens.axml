@@ -97,6 +97,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#fff44336"
                 android:id="@+id/ErrorButton"
                 android:visibility="visible" />
             <Button

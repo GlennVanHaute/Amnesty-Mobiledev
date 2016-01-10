@@ -47,10 +47,28 @@ namespace AmnestyInternational
 			// naamID aanpassen met de data dat we binnenkrijgen via de vorige intent -> naamID.Text (code voor de text van selected id aan te passen)
 			backToMain.Click += (sender, e) => {
 				{
-					var intent = new Intent(this, typeof(MainActivity));
+					var intent = new Intent(this, typeof(ComfirmationActivity));
 					//hier kunnen we data doorspelen naar de volgende Activity door deze aan de intent de linken.
+					var amount = FindViewById<EditText> (Resource.Id.amount);
+					var kaartnummer = FindViewById<EditText> (Resource.Id.rekeningnummer);
+
+					intent.PutExtra("donator_name", donator_name);
+					intent.PutExtra("donator_email", donator_email);
+					intent.PutExtra("donator_street", donator_street);
+					intent.PutExtra("donator_zipcode", donator_zipcode);
+					intent.PutExtra("donator_city", donator_city);
+					intent.PutExtra("donator_country",donator_country);
+					intent.PutExtra("donator_amount", amount.Text.ToString());
+					intent.PutExtra("donator_rekening", kaartnummer.Text.ToString());
 					StartActivity(intent);
 				}
+			};
+
+			Button backToContact = FindViewById<Button> (Resource.Id.backToContact);
+			backToContact.Click += delegate{
+				var intent = new Intent(this, typeof(ContactActivity));
+				StartActivity(intent);
+
 			};
 		}
 	}

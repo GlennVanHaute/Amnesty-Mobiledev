@@ -50,6 +50,11 @@ namespace AmnestyInternational
 				if (String.IsNullOrWhiteSpace(inputEmail.Text.ToString())){
 					inputEmail.Error = "Dit veld is nog niet ingevuld";
 				}
+				inputEmail.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+
+					//mail validation
+				
+				};
 			};
 			inputStreet.FocusChange += delegate{
 

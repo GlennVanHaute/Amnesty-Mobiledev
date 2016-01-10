@@ -34,29 +34,34 @@
         android:inputType="numberDecimal"
         android:layout_width="346.0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/amount"
         android:paddingLeft="15dp"
         android:paddingTop="15dp" />
     <TextView
-        android:text="Type"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="379.0dp"
+        android:text="Rekening nummer"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <ToggleButton
-        android:layout_width="130.5dp"
+        android:id="@+id/textView4"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toggleButton1"
-        android:textOn="Enkel"
-        android:textOff="Domiciliëring" />
+        android:id="@+id/rekeningnummer"
+        android:paddingLeft="15dp" />
     <Button
         android:text="Verder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ff00c853"
         android:id="@+id/backToMain" />
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="fill_parent"
+    <Button
+        android:text="Terug"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test" />
+        android:textColor="#fff44336"
+        android:id="@+id/backToContact" />
 </LinearLayout>
