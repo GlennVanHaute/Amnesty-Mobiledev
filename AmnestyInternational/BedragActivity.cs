@@ -17,7 +17,34 @@ namespace AmnestyInternational
 {
 	[Activity (Label = "BedragActivity")]			
 	public class BedragActivity : Activity
-	{
+	{	
+		private bool IsIbanChecksumValid(string iban) {
+			if(iban.Length < 4 || iban[0] == ' ' || iban[1] == ' ' || iban[2] == ' ' || iban[3] == ' ') throw new InvalidOperationException();
+
+			var checksum = 0;
+			var ibanLength = iban.Length;
+			for(int charIndex = 0;charIndex < ibanLength;charIndex++) {
+				if(iban[charIndex] == ' ') continue;
+
+				int value;
+				var c = iban[(charIndex + 4) % ibanLength];
+				if((c >= '0') && (c <= '9')) {
+					value = c - '0';
+				} else if((c >= 'A') && (c <= 'Z')) {
+					value = c - 'A';
+					checksum = (checksum * 10 + (value / 10 + 1)) % 97;
+					value %= 10;
+				} else if((c >= 'a') && (c <= 'z')) {
+					value = c - 'a';
+					checksum = (checksum * 10 + (value / 10 + 1)) % 97;
+					value %= 10;
+				} else throw new InvalidOperationException();
+
+				checksum = (checksum * 10 + value) % 97;
+			}
+			return checksum == 1;
+		}
+		
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -36,7 +63,13 @@ namespace AmnestyInternational
 
 			Log.Info ("donator_email", donator_email); // dit werkt!
 
-		
+			var kaartnummer = FindViewById<EditText> (Resource.Id.rekeningnummer);
+			kaartnummer.FocusChange += delegate{
+
+				if (this.IsIbanChecksumValid(kaartnummer.Text.ToString())){
+					kaartnummer.Error = "Iban is niet geldig.";
+				}
+			};
 
 			// Create your application here
 			SetContentView (Resource.Layout.Bedrag);
@@ -50,7 +83,6 @@ namespace AmnestyInternational
 					var intent = new Intent(this, typeof(ComfirmationActivity));
 					//hier kunnen we data doorspelen naar de volgende Activity door deze aan de intent de linken.
 					var amount = FindViewById<EditText> (Resource.Id.amount);
-					var kaartnummer = FindViewById<EditText> (Resource.Id.rekeningnummer);
 
 					intent.PutExtra("donator_name", donator_name);
 					intent.PutExtra("donator_email", donator_email);

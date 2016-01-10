@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 //using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace AmnestyInternational
 {
@@ -45,15 +46,23 @@ namespace AmnestyInternational
 					inputName.Error = "Dit veld is nog niet ingevuld";
 				}
 			};
+			var emailValid = false;
 			inputEmail.FocusChange += delegate{
+
+
 
 				if (String.IsNullOrWhiteSpace(inputEmail.Text.ToString())){
 					inputEmail.Error = "Dit veld is nog niet ingevuld";
 				}
 				inputEmail.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 
-					//mail validation
-				
+					if(!Regex.Match(inputEmail.Text.ToString(), @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
+					{
+						inputEmail.Error = "Dit is geen geldig mail adres.";
+					} else {
+						emailValid = true;
+					}
+	
 				};
 			};
 			inputStreet.FocusChange += delegate{
@@ -103,7 +112,7 @@ namespace AmnestyInternational
 					intent.PutExtra("donator_city", inputCity.Text.ToString());
 					intent.PutExtra("donator_country", inputCountry.Text.ToString());
 
-					if (String.IsNullOrWhiteSpace(inputName.Text.ToString()) || String.IsNullOrWhiteSpace(inputEmail.Text.ToString()) || String.IsNullOrWhiteSpace(inputStreet.Text.ToString()) || String.IsNullOrWhiteSpace(inputZipcode.Text.ToString()) || String.IsNullOrWhiteSpace(inputCity.Text.ToString()) || String.IsNullOrWhiteSpace(inputCountry.Text.ToString())  ){
+					if (String.IsNullOrWhiteSpace(inputName.Text.ToString()) || String.IsNullOrWhiteSpace(inputEmail.Text.ToString()) || String.IsNullOrWhiteSpace(inputStreet.Text.ToString()) || String.IsNullOrWhiteSpace(inputZipcode.Text.ToString()) || String.IsNullOrWhiteSpace(inputCity.Text.ToString()) || String.IsNullOrWhiteSpace(inputCountry.Text.ToString()) || !emailValid){
 						var ErrorButton = FindViewById<TextView> (Resource.Id.ErrorButton);
 
 						ErrorButton.Text = "Niet alle velden zijn ingevuld";
